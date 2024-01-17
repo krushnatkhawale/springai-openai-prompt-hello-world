@@ -24,4 +24,8 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+
+	afterTest { desc, result ->
+		logger.quiet "Executing test ${desc.className.substring(desc.className.lastIndexOf('.')+1)}.${desc.name} with result: ${result.resultType}"
+	}
 }
