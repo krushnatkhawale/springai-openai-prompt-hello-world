@@ -27,7 +27,7 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           check-latest: true
-      - name: Check java version
+      - name: Log java version
         run: java --version
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
